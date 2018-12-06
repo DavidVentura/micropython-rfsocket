@@ -127,8 +127,8 @@ class RFSocket:
         # bring some of the stuff as local variables, this greately
         # improves/stabilizes message signal timings
         t, one, zero, start, stop = self._timings.T, self._timings.ONE, self._timings.ZERO, self._timings.START, self._timings.STOP
-        high = self._pin.high
-        low = self._pin.low
+        high = self._pin.on
+        low = self._pin.off
         _phys = self._phys
 
         mask = 1 << 31
