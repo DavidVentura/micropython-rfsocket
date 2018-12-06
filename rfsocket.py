@@ -72,6 +72,7 @@ class RFSocket:
     }
 
     def __init__(self, pin, chann=ANSLUT, remote_id=0, timings=RFTimings):
+        machine.freq(160000000)
         self._pin = pin
         self._chann = chann
         self._remote_id = (remote_id & (2**26 - 1)) or default_remote_id()
